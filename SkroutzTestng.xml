@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Skroutz Test Suite" parallel="classes" verbose="10">
+
+    <parameter name="url" value="https://www.skroutz.gr/">
+
+    </parameter>
+
+    <parameter name="timeout.duration" value="10">
+
+    </parameter>
+
+    <test name="Test for Skroutz">
+        <classes>
+            <class name="SkroutzTestCase"></class>
+        </classes>
+    </test>
+</suite>

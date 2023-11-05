@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Amazon Test Suite" verbose="10">
+
+    <parameter name="url" value="https://www.amazon.com/">
+
+    </parameter>
+
+    <parameter name="timeout.duration" value="10">
+
+    </parameter>
+
+    <test name="Test for Amazon">
+        <classes>
+            <class name="AmazonTestCase"></class>
+        </classes>
+    </test>
+</suite>
