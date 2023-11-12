@@ -1,6 +1,6 @@
 import business.objects.SkroutzBO.SkroutzUserActionBO;
-import config.TestBase;
-import config.WebDriverFactory;
+import common.TestBase;
+import common.WebDriverFactory;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

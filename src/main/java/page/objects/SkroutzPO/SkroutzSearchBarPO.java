@@ -1,6 +1,6 @@
 package page.objects.SkroutzPO;
 
-import config.WebDriverFactory;
+import common.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

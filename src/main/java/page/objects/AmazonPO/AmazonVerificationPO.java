@@ -1,6 +1,6 @@
 package page.objects.AmazonPO;
 
-import config.WebDriverFactory;
+import common.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
