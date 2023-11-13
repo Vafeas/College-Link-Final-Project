@@ -1,4 +1,5 @@
 import business.objects.SkroutzBO.SkroutzUserActionBO;
+import common.BaseActions;
 import common.TestBase;
 import common.WebDriverFactory;
 import io.qameta.allure.*;
@@ -15,17 +16,18 @@ import org.testng.annotations.Test;
 @Story("Story 2 of Feature 2")
 public class SkroutzTestCase extends TestBase {
 
-    WebDriver driver;
-    WebDriverWait wait;
+//    WebDriver driver;
+//    WebDriverWait wait;
 
 //    TypeValueOnSearchBar typeValueOnSearchBar;
-
+    BaseActions baseActions;
     SkroutzUserActionBO userActionBO;
 
     @BeforeClass(alwaysRun = true)
     public void initEnv(){
-        driver = WebDriverFactory.getDriver();
-        wait = WebDriverFactory.getWait();
+//        driver = WebDriverFactory.getDriver();
+//        wait = WebDriverFactory.getWait();
+        baseActions = new BaseActions();
         userActionBO = new SkroutzUserActionBO();
     }
 

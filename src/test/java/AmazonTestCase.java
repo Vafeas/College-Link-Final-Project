@@ -1,4 +1,5 @@
 import business.objects.AmazonBO.AmazonUserActionBO;
+import common.BaseActions;
 import common.TestBase;
 import common.WebDriverFactory;
 import io.qameta.allure.*;
@@ -14,14 +15,16 @@ import org.testng.annotations.Test;
 @Story("Story 1 of Feature 1")
 public class AmazonTestCase extends TestBase {
 
-    WebDriver driver;
-    WebDriverWait wait;
+//    WebDriver driver;
+//    WebDriverWait wait;
+    BaseActions baseActions;
     AmazonUserActionBO userActionBO;
 
     @BeforeClass(alwaysRun = true)
     public void initEnv(){
-        driver = WebDriverFactory.getDriver();
-        wait = WebDriverFactory.getWait();
+//        driver = WebDriverFactory.getDriver();
+//        wait = WebDriverFactory.getWait();
+        baseActions = new BaseActions();
         userActionBO = new AmazonUserActionBO();
     }
     @Step

@@ -1,5 +1,6 @@
 package page.objects.AmazonPO;
 
+import common.BaseActions;
 import common.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,3 +25,5 @@ public class AmazonSearchBarPO {
         driver.findElement(By.xpath(SubmitButton)).click();
     }
 }
+
+
