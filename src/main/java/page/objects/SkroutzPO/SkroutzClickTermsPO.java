@@ -17,6 +17,14 @@ public class SkroutzClickTermsPO extends BaseActions {
     }
 }
 
+
+
+
+
+
+
+
+
 //public class SkroutzClickTermsPO {
 //
 //    final String clickOnTerms = "//button[@id='accept-all']";

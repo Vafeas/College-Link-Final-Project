@@ -15,6 +15,7 @@ public class AmazonUserActionBO {
        userAction(typeValueOnSearchBar);
     }
     public void userAction(String typeValueOnSearchBar) {
+//        this.searchBarPO.typingValueOnSearchBar(typeValueOnSearchBar);
         this.searchBarPO.typingValueOnSearchBar(typeValueOnSearchBar);
         this.searchBarPO.clickTheSubmitButton();
         this.clickOnProductPO.clickOnProduct();

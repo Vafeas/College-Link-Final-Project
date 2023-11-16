@@ -8,7 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AmazonClickOnProductPO extends BaseActions{
-    private By chooseProduct = By.xpath("/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[4]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span");
+//    private By chooseProduct = By.xpath("/html/body/div[1]/div[1]/div[1]/div[1]/div/span[1]/div[1]/div[4]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span");
+private By chooseProduct = By.xpath("//div[@data-component-type='s-search-result'][3]//span[@data-component-type='s-product-image']/a");
+
 
     public AmazonClickOnProductPO clickOnProduct(){
         waitForElement(chooseProduct);
@@ -16,6 +18,12 @@ public class AmazonClickOnProductPO extends BaseActions{
         return this;
     }
 }
+
+
+
+
+
+
 
 
 //public class AmazonClickOnProductPO {

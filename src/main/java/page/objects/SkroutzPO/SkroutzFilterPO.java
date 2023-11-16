@@ -17,6 +17,15 @@ public class SkroutzFilterPO extends BaseActions {
     }
 }
 
+
+
+
+
+
+
+
+
+
 //public class SkroutzFilterPO {
 //
 //        final String filterSelect = "//*[@id=\"categories_show\"]/div[6]/main/div/section/div[1]/div[12]/ul/li[3]/a";

@@ -5,11 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-//import static java.awt.SystemColor.text;
-
-public class BaseActions {
-
+public class BaseActions{
 
     public WebDriver getDriver() {
         return WebDriverFactory.getDriver();
@@ -28,10 +24,13 @@ public class BaseActions {
         getDriver().findElement(locator).click();
     }
 
-//    public void input(By locator) {
-//        waitForElement(locator);
-//        getDriver().findElement(locator).sendKeys(text);
-//    }
+    public void input(By locator, String typeValueOnSearchBar) {
+        waitForElement(locator);
+        getDriver().findElement(locator).sendKeys(typeValueOnSearchBar);
+    }
 
-
+    public void verify(By locator){
+        waitForElement(locator);
+        getDriver().findElement(locator).isDisplayed();
+    }
 }

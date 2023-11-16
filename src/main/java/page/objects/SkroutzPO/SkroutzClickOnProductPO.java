@@ -17,6 +17,11 @@ public class SkroutzClickOnProductPO extends BaseActions {
     }
 }
 
+
+
+
+
+
 //public class SkroutzClickOnProductPO {
 //
 //    final String chooseProduct2 = "//*[@id=\"sku-list\"]/li[5]/div/h2/a";
