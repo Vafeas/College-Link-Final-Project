@@ -8,7 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SkroutzFilterPO extends BaseActions {
-    private By filterSelect = By.xpath("//*[@id=\"categories_show\"]/div[6]/main/div/section/div[1]/div[12]/ul/li[3]/a");
+//    private By filterSelect = By.xpath("//*[@id=\"categories_show\"]/div[6]/main/div/section/div[1]/div[12]/ul/li[3]/a");
+    private By filterSelect = By.xpath("//li[@data-testid='875210']/a");
 
     public SkroutzFilterPO clickFilter(){
         waitForElement(filterSelect);

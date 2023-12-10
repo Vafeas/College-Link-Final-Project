@@ -8,8 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SkroutzClickOnProductPO extends BaseActions {
-    private By chooseProduct2 = By.xpath("//*[@id=\"sku-list\"]/li[5]/div/h2/a");
-
+//    private By chooseProduct2 = By.xpath("//*[@id=\"sku-list\"]/li[5]/div/h2/a");
+//    private By chooseProduct2 = By.xpath("//*[@id=\"sku-list\"]/li[5]/a");
+private By chooseProduct2 = By.xpath("//ol[@id='sku-list']/li[@data-skuid='31006584']/a");
     public SkroutzClickOnProductPO clickOnProduct2(){
         waitForElement(chooseProduct2);
         click(chooseProduct2);
