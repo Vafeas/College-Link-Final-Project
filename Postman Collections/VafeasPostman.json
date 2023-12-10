@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "dd4e55ba-2dc6-4f2a-9086-75ef20057e2b",
+		"name": "api-automation- testing",
+		"description": "**Scenario:**\n\nPostman collection με όνομα \"api-automation- testing\", το οποίο  \nπεριέχει το εξής 2 requests:\n\n_**1)**_\n\n_**Eνα \"GET\" http call στο genderize Api με name παράμετρο το όνομα maria όπου μέσω postman test να**______**πιστοποιηθούν τα εξής:**_\n\n_**a) Step1:**_\n\nΝα πιστοποιηθεί ότι το response από το συγκεκριμένο call είναι code = 200 ή ‘ΟΚ’.\n\n_**b) Step2:**_\n\nΝα πιστοποιηθεί ότι τα values των json attributes που γυρνάει το Api έχουν  \nσυγκεκριμένο data type και ποιο συγκεκριμένα ότι:\n\ni. Το name είναι τύπου string  \nii. Το gender είναι τύπου string  \niii. Και τα probability, count είναι τύπου number.\n\n_**c) Step3:**_\n\nΝα πιστοποιηθούν τα values των attributes\n\ni. name = maria  \nii. gender = female\n\n_**2)**_\n\n_**Eνα δεύτερο \"GET\" http call στο genderize Api με παράμετρο τα ονόματα peter και maria όπου μέσω**______**postman test να πιστοποιηθούν τα εξής:**_\n\n_**a) Step1:**_\n\nΝα πιστοποιηθεί ότι το response από το συγκεκριμένο call είναι code = 200 ή ‘ΟΚ’.\n\n_**b) Step2:**_\n\nΝα πιστοποιηθεί ότι το response του Api είναι data type = array.\n\n_**c) Step3:**_\n\nΝα πιστοποιηθούν τα values των 2 json attributes μέσα στο json array:\n\ni. Για το πρώτο json του array είναι name = peter και gender = male.  \nii. Για το δεύτερο json του array είναι name = maria και gender = female",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wood Collection request 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3fd021fc-1b14-4f99-b8bc-888ee0ef95e7",
+						"exec": [
+							"var responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Verify code\", function(){\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify data types to response\", function(){\r",
+							"    pm.expect(responseJson.count).to.be.a(\"number\");\r",
+							"    pm.expect(responseJson.name).to.be.a(\"string\");\r",
+							"    pm.expect(responseJson.gender).to.be.a(\"string\");\r",
+							"    pm.expect(responseJson.probability).to.be.a(\"number\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify attribute values\", function(){\r",
+							"    pm.expect(responseJson.name).to.be.equals(\"maria\");\r",
+							"    pm.expect(responseJson.gender).to.be.equals(\"female\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "2f33f326-154a-43a6-9e3f-fa3f19eb1990",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/?name=maria",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "maria"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wood Collection request 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3fd021fc-1b14-4f99-b8bc-888ee0ef95e7",
+						"exec": [
+							"var responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Verify code\", function(){\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify data type\", function(){\r",
+							"    pm.expect(responseJson).to.be.an(\"array\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify attribute values\", function(){\r",
+							"    pm.expect(responseJson[0].name).to.be.equals(\"peter\");\r",
+							"    pm.expect(responseJson[0].gender).to.be.equals(\"male\");\r",
+							"    pm.expect(responseJson[1].name).to.be.equals(\"maria\");\r",
+							"    pm.expect(responseJson[1].gender).to.be.equals(\"female\");\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "2b3a9870-a8ae-4109-b2ef-5c237b589ea2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/?name[]=peter&name[]=maria",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "name[]",
+							"value": "peter"
+						},
+						{
+							"key": "name[]",
+							"value": "maria"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
