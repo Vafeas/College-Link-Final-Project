@@ -1,9 +1,6 @@
 # College-Link-Final-Project
 
 -----------------------------------------------------------------------------------------------------------------
-Project description in English/Greek - Περιγραφή του project αγγλικά/ελληνικά
------------------------------------------------------------------------------------------------------------------
-
 English description:
 
 PART 1
@@ -31,13 +28,13 @@ i. It will go to the amazon home page : https://www.amazon.com
 
 ii. It will type in the search bar on the top of the page: lg tv 65 and click search.
 
-iii. From the page of TVs that comes up, he will select the third item in order of appearance.
+iii. From the page of TVs that comes up, it will select the third item in order of appearance.
 
-iv. On the next page that will appear with the detailed ones he will do:
+iv. On the next page that will appear it will:
 
-Assert the Screen Size = 65 inches
+- Assert the Screen Size = 65 inches
 
-Assert that the Brand is LG
+- Assert that the Brand is LG
 
 b) Create the second test scenario that will do the following:
 
@@ -47,16 +44,16 @@ ii. It will search in the search bar for iphone13.
 
 iii. It will select from the left filter bar, the filter: Screen 6.0¨ - 6.4¨.
 
-iv. From the results in the list he will click on the mobile phone titled: Apple iPhone 13 5G (4GB/128GB) Midnight.
+iv. From the results in the list it will click on the mobile phone titled: Apple iPhone 13 5G (4GB/128GB) Midnight.
 
-v. And in the new page that will open up do assert:
+v. And in the new page that opens it will assert:
 
-That the title of the mobile is: Apple iPhone 13 5G (4GB/128GB) Midnight.
+- That the title of the mobile is: Apple iPhone 13 5G (4GB/128GB) Midnight.
 
-That in the basic features it says: 5G connectivity network
+- That in the basic features it says: 5G connectivity network
 
 Task 3: Execute test scenarios:
-After the two automated test cases have been implemented to execute these tests you need to build a suite (testing.xml) that will run the two tests in parallel.
+After the two automated test cases have been implemented to execute, you need to build a suite (testing.xml) that will run the two tests in parallel.
 
 
 PART 2
@@ -69,7 +66,7 @@ Create a postman collection named "api-automation- testing", which will contains
 
 
 Task 1:
-A "GET" http call to genderize Api with name parameter maria where via postman test to the following are authenticated:
+A "GET" http call to genderize Api with name parameter maria via postman test to the following are authenticated:
 
 a) Step1: Certify that the response from this call is code = 200 or 'OK'.
 
@@ -88,7 +85,7 @@ i. name = maria
 ii. gender = female
 
 Task 2:
-A second "GET" http call to the genderize Api with the names peter and maria as parameters where via postman test to authenticate the following:
+A second "GET" http call to the genderize Api with the names peter and maria as parameters where via postman test that will authenticate the following:
 
 a) Step1: Certify that the response from this call is code = 200 or 'OK'.
 
@@ -101,7 +98,6 @@ i. For the first json of the array is name = peter and gender = male.
 ii. For the second json of the array is name = maria and gender = female.
 
 -----------------------------------------------------------------------------------------------------------------
-
 Περιγραφή στα ελληνικά:
 
 ΜΕΡΟΣ 1
